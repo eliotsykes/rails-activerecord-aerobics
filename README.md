@@ -22,9 +22,9 @@ Don't be too abstract with models, favour classes developers might encounter in 
 3. `bundle install`
 4. `bundle binstubs rspec-core`
 5. `bin/rake db:migrate` to setup the db
-6. `bin/rake gen` to generate workout plans/spec skeletons. Templates live in `./plans`. Specs to be edited will be generated in `./spec`
-7. `bin/rspec` or `bin/rake go` to begin working out/running specs in `./spec`
-8. Rely on rspec expectations to provide coaching
+6. `bin/rake gen` to generate exercises in `spec/exercises`
+7. `bin/rspec spec/exercises` or `bin/rake go` to begin your aerobics workout
+8. The exercise specs will fail. Go in and edit them where it says YOUR_CODE_HERE to make them pass.
 
 ### How to structure the specs?
 
