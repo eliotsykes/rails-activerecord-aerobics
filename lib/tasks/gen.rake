@@ -1,3 +1,5 @@
+
+desc "Generates fresh exercise files in spec/exercises"
 task :gen do
 
   TEMPLATE_SPECS_PATTERN = "plans/templates/*_spec.rb"

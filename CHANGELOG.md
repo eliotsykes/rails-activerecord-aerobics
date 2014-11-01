@@ -1,6 +1,6 @@
 # Unreleased
 - Drafting ideas for exercises and educational progression (Workout Plans)
-- Started empty Rails 4.2 app
 - Install rspec-rails
 - Install factory_girl
-- rake gen task implemented for one file
+- rake gen task implemented
+- rake go task implemented
