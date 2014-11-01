@@ -3,7 +3,7 @@ Boost your [Rails ActiveRecord Query](http://guides.rubyonrails.org/active_recor
 
 Rails ActiveRecord Aerobics is a collection of exercises to help you learn, practice, and master Rails ActiveRecord Querying. 
 
-This is for all Rails developers of all experience levels. 
+This is for all Rails developers of all experience levels. Consult a medical practitioner before beginning a new fitness program.
 
 The exercises build on each other to strengthen your query skills bit-by-bit. Take them as fast or as slow as you like.
 
