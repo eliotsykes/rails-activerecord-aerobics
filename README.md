@@ -20,10 +20,11 @@ Don't be too abstract with models, favour classes developers might encounter in 
 1. `git clone` (skip fork?)
 2. `cd rails-activerecord-aerobics`
 3. `bundle install`
-4. `bin/rake db:migrate` to setup the db
-5. `bin/rake gen` to generate workout plans/spec skeletons (see Ruby Koans). Templates (and solutions?) live in `./plans`. Specs to be edited will be generated in `./spec`
-6. `bin/rspec` or `bin/rake go` to begin working out/running specs in `./spec`
-7. Rely on rspec expectations to provide coaching
+4. `bundle binstubs rspec-core`
+5. `bin/rake db:migrate` to setup the db
+6. `bin/rake gen` to generate workout plans/spec skeletons. Templates live in `./plans`. Specs to be edited will be generated in `./spec`
+7. `bin/rspec` or `bin/rake go` to begin working out/running specs in `./spec`
+8. Rely on rspec expectations to provide coaching
 
 ### How to structure the specs?
 

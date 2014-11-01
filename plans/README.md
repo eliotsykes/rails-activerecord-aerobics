@@ -1,0 +1,1 @@
+`plans` directory is where the templates live for the exercises. Unless you're a contributor to the project, you probably shouldn't be in this directory. Instead, you probably want to be editing the files in the `spec/exercises`directory.

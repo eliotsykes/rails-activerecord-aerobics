@@ -1,0 +1,1 @@
+This directory (`spec/exercises`) should contain all of your *_spec.rb exercise files that you'll be editing to practice ActiveRecord querying. If it doesn't contain a load of *_spec.rb files, then run `rake gen` to prepare this directory with the files.

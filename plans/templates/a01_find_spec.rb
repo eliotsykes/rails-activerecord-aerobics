@@ -22,7 +22,8 @@ describe ".find(*args) workout" do
         
         # See the YOUR_CODE_HERE? Replace it with code to make
         # this spec pass:
-        book = YOUR_CODE_HERE
+        book = Book.find(2)#hide
+        # book = YOUR_CODE_HERE#show
         
         expect(book.id).to eq(2)
         expect(book.title).to eq("Programming Ruby")
@@ -35,7 +36,8 @@ describe ".find(*args) workout" do
       it 'finds book with id "123" (a String, not a Fixnum)' do
         create(:book, id: 123, title: "Exceptional Ruby")
         
-        book = YOUR_CODE_HERE "123"
+        book = Book.find("123")#hide
+        # book = YOUR_CODE_HERE "123"#show
 
         expect(book.id).to eq(123)
         expect(book.title).to eq("Exceptional Ruby")
