@@ -1,5 +1,5 @@
 # Rails ActiveRecord Aerobics
-Boost your Rails ActiveRecord Query core fitness with this workout plan. For the home, office, and gym.
+Boost your [Rails ActiveRecord Query](http://guides.rubyonrails.org/active_record_querying.html) core fitness with this workout plan. For the home, office, and gym.
 
 Rails ActiveRecord Aerobics is a collection of exercises to help you learn, practice, and master Rails ActiveRecord Querying. 
 
