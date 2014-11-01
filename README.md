@@ -24,7 +24,8 @@ Don't be too abstract with models, favour classes developers might encounter in 
 5. `bin/rake db:migrate` to setup the db
 6. `bin/rake gen` to generate exercises in `spec/exercises`
 7. `bin/rake go` to begin your aerobics workout
-8. The exercise specs in `spec/exercises` will fail. Go in and edit them where it says YOUR_CODE_HERE to make them pass. Feel the burn.
+8. The exercise specs in `spec/exercises` will fail. Go in and edit them where it says YOUR_CODE_HERE to make them pass.
+9. Feel the burn.
 
 ### How to structure the specs?
 
