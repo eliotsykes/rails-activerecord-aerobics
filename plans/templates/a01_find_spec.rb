@@ -56,8 +56,8 @@ describe ".find(*args) workout" do
       expect(Book.find("987654 EXCEPTIONAL RUBY")).to eq(@exceptional_book)#hide
       # expect(YOUR_CODE_HERE("987654 EXCEPTIONAL RUBY")).to eq(@exceptional_book)#show
       
-      expect(Book.find("99-rred")).to eq(@refactor_book)#hide
-      # expect(YOUR_CODE_HERE("99-rred")).to eq(@refactor_book)#show
+      expect(Book.find("00099-rred")).to eq(@refactor_book)#hide
+      # expect(YOUR_CODE_HERE("00099-rred")).to eq(@refactor_book)#show
 
       expect(Book.find("11223344 Hello World!")).to eq(@practice_book)#hide
       # expect(YOUR_CODE_HERE("11223344 Hello World!")).to eq(@practice_book)#show
