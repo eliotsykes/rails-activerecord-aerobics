@@ -52,4 +52,13 @@ Last y specs focus on one family of models each, with exercises that make use of
 8. b08_money/account/finance_spec
 9. ???
 
+## Contributors
+
+- Eliot Sykes https://eliotsykes.com/
+- Your name here - Contributions welcome!
+
+## Contributors FAQ
+
+### How to run workout plan specs?
+`bin/rspec plans`
 
