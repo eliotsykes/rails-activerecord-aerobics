@@ -10,7 +10,7 @@ describe ".find(id) workout" do
     @practice_book = create(:book, id: 11223344, title: "Practicing Rails")
   end
 
-  it "handles numeric (Fixnum) ids" do
+  it "returns object for numeric (Fixnum) ids" do
     # Here's the first one done for you!
     expect(Book.find(1)).to eq(@agile_book)#hide
     # expect(Book.find(1)).to eq(@agile_book)#show
@@ -29,7 +29,7 @@ describe ".find(id) workout" do
     # expect(YOUR_CODE_HERE).to eq(@practice_book)#show
   end
 
-  it "handles pure numerical String ids" do
+  it "returns object for pure numerical String ids" do
     expect(Book.find("1")).to eq(@agile_book)
 
     expect(Book.find("123")).to eq(@prog_book)#hide
@@ -45,7 +45,7 @@ describe ".find(id) workout" do
     # expect(YOUR_CODE_HERE).to eq(@practice_book)#show
   end
 
-  it "handles Strings that can be converted to numeric ids" do
+  it "returns object for Strings that can be converted to numeric ids" do
     expect(Book.find("1-agile-web")).to eq(@agile_book)
 
     expect(Book.find("123_ruby_prog_book")).to eq(@prog_book)#hide
