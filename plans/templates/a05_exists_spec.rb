@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "exists? workout" do
+describe ".exists? workout" do
 
   context "without arguments" do
 
