@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "ordinal methods workout", focus: true do
+describe "ordinal methods workout" do
 
   before do
     @new_zealand = create(:country, id: 15, name: "New Zealand")
@@ -42,14 +42,57 @@ describe "ordinal methods workout", focus: true do
     end
   end
 
-  context ".second, .third, .fourth, .fifth, and .forty_two" do
-    xit "returns the object at the given ordinal (ordered by id ascending)" do
+  context ".second, .third, .fourth, .fifth" do
+    it "returns the object at the given ordinal (ordered by id ascending)" do
       
       expect(Country.second).to eq @south_africa#hide
       # expect(Country.second).to eq YOUR_CODE_HERE#show
 
+      expect(Country.third).to eq @new_zealand#hide
+      # expect(Country.third).to eq YOUR_CODE_HERE#show
 
+      expect(Country.fourth).to eq @iceland#hide
+      # expect(YOUR_CODE_HERE).to eq @iceland#show
+
+      expect(Country.fifth).to eq @brazil#hide
+      # expect(Country.fifth).to eq YOUR_CODE_HERE#show
     end
+  end
+
+  context ".sixth" do
+    it "is a non-existent method" do
+      expect { Book.sixth }.to raise_error NoMethodError
+
+      expect { Country.sixth }.to raise_error NoMethodError#hide
+      # expect { Country.sixth }.to YOUR_CODE_HERE#show
+
+      expect { Article.sixth }.to raise_error NoMethodError#hide
+      # expect { Article.YOUR_CODE_HERE }.to raise_error NoMethodError#show
+    end
+  end
+
+  context ".forty_two" do
+    it "absolutely is a method" do
+      
+      expect { Country.forty_one }.to raise_error NoMethodError
+      expect { Country.forty_two }.not_to raise_error
+      expect(Country.forty_two).to eq nil#hide
+      # expect(Country.forty_two).to eq YOUR_CODE_HERE#show
+
+      expect { Book.forty_one }.to raise_error NoMethodError#hide
+      # expect { Book.forty_one }.to YOUR_CODE_HERE#show
+      expect { Book.forty_two }.not_to raise_error#hide
+      # expect { YOUR_CODE_HERE }.not_to raise_error#show
+      expect(Book.forty_two).to eq nil#hide
+      # expect(YOUR_CODE_HERE).to eq nil#show
+
+      create_list(:meeting, 42)
+      expect(Meeting.count).to eq(42)#hide
+      # expect(Meeting.count).to eq(42)#show
+      expect(Meeting.forty_two).to eq(Meeting.last)#hide
+      # expect(YOUR_CODE_HERE).to eq(Meeting.last)#show
+    end
+
   end
 
 end
