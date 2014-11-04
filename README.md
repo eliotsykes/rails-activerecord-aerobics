@@ -5,7 +5,9 @@ Rails ActiveRecord Aerobics is a collection of exercises to help you learn, prac
 
 This is for all Rails developers of all experience levels. Consult a medical practitioner before beginning a new fitness program.
 
-The exercises build on each other to strengthen your query skills bit-by-bit. Take them as fast or as slow as you like.
+The exercises build on each other to strengthen your query skills bit-by-bit. Take them as fast or as slow as you like. 
+
+Use common sense and deduction to figure out what code is being asked for, then write it, wherever you encounter `YOUR_CODE_HERE` in the exercises.
 
 ## Draft Workout Plans (work in progress)
 
