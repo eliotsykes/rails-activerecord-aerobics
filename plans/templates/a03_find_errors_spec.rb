@@ -1,8 +1,8 @@
 require "rails_helper"
 
-describe ".find(*args) errors workout", focus: true do
+describe ".find(*args) errors workout" do
 
-  it "raises ActiveRecord::RecordNotFound error for unknown id", focus: true do
+  it "raises ActiveRecord::RecordNotFound error for unknown id" do
 
     expect { Book.find(1) }.to raise_error(ActiveRecord::RecordNotFound)
 
