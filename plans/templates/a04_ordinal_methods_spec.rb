@@ -42,7 +42,7 @@ describe "ordinal methods workout" do
     end
   end
 
-  context ".first! and .last!", focus: true do
+  context ".first! and .last!" do
     it "raise ActiveRecord::RecordNotFound error if no matching records found" do
 
       expect(Book.first!).to eq(@agile_book)#hide
