@@ -41,6 +41,8 @@ First x specs each deal with one topic and a set of tightly related drills using
 10. a10_basic_sql_spec
 11. a11_advanced_sql_spec
 
+(remember to write exercises for ActiveRecord::Calculations)
+
 Last y specs focus on one family of models each, with exercises that make use of all previously learned skills. Start off with a few finds, then some find_bys, and work up to joins and more, all in one spec file for each model family.
 
 1. b01_book_spec
