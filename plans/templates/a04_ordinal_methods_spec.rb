@@ -42,6 +42,33 @@ describe "ordinal methods workout" do
     end
   end
 
+  context ".first! and .last!", focus: true do
+    it "raise ActiveRecord::RecordNotFound error if no matching records found" do
+
+      expect(Book.first!).to eq(@agile_book)#hide
+      # expect(Book.first!).to eq(YOUR_CODE_HERE)#show
+      
+      expect(Book.last!).to eq(@prog_book)#hide
+      # expect(Book.last!).to eq(YOUR_CODE_HERE)#show
+
+      books = Book.where(title: "Non-existent Book Title")
+      expect{ books.first! }.to raise_error ActiveRecord::RecordNotFound
+      expect{ books.last! }.to raise_error ActiveRecord::RecordNotFound#hide
+      # expect{ books.last! }.to raise_error YOUR_CODE_HERE#show
+
+      expect(Article.first!).to eq(@cat_article)#hide
+      # expect(YOUR_CODE_HERE.first!).to eq(@cat_article)#show
+      expect(Article.last!).to eq(@dog_article)#hide
+      # expect(YOUR_CODE_HERE.last!).to eq(@dog_article)#show
+
+      articles = Article.where(headline: "Non-existent Headline")
+      expect{ articles.first! }.to raise_error ActiveRecord::RecordNotFound#hide
+      # expect{ aYOUR_CODE_HEREs.fYOUR_CODE_HERE! }.to raise_error YOUR_CODE_HERE#show
+      expect{ articles.last! }.to raise_error ActiveRecord::RecordNotFound#hide
+      # expect{ YOUR_CODE_HERE.lYOUR_CODE_HERE! }.to raise_error YOUR_CODE_HERE#show
+    end
+  end
+
   context ".second, .third, .fourth, .fifth" do
     it "returns the object at the given ordinal (ordered by id ascending)" do
       
