@@ -21,8 +21,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.5'
   gem 'faker', '~> 1.4'
+  gem 'awesome_print', '~> 1.2.0'
 end
 
 group :test do
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers', '~> 2.7.0', require: false
 end
