@@ -7,4 +7,10 @@ RSpec.describe Category, :type => :model do
       expect(Category.exists?(name: "Plumbing Tools")).to eq(true)
     end
   end
+
+  context "associations" do
+    it "has and belongs to many products" do
+      expect(Category.new).to have_and_belong_to_many(:products)
+    end
+  end
 end

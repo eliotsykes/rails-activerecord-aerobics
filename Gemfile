@@ -22,3 +22,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.5'
   gem 'faker', '~> 1.4'
 end
+
+group :test do
+  gem 'shoulda-matchers', require: false
+end
