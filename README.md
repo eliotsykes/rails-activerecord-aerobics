@@ -9,6 +9,8 @@ The exercises build on each other to strengthen your query skills bit-by-bit. Ta
 
 Use common sense and deduction to figure out what code is being asked for, then write it, wherever you encounter `YOUR_CODE_HERE` in the exercises.
 
+If you want a playground of data to experiment and practice with then run `bin/rake db:seed`, followed by `bin/rails c`, and then try out a few queries with the provided data. e.g. `Category.where("name like '%e%'").count` and `Product.all`.
+
 ## Draft Workout Plans (work in progress)
 
 ### What to practice?
@@ -17,7 +19,7 @@ From `find` to advanced queries using `join`, `includes`. Everything covered in 
 
 Don't be too abstract with models, favour classes developers might encounter in a day job.
 
-### What's the easiest flow for newcomers?
+### How do I run the exercises?
 
 1. `git clone` (skip fork?)
 2. `cd rails-activerecord-aerobics`
@@ -29,6 +31,7 @@ Don't be too abstract with models, favour classes developers might encounter in 
 8. The exercise specs in `spec/exercises` will fail. Go in and edit them where it says YOUR_CODE_HERE to make them pass.
 9. Repeat steps 7 and 8 until all your exercises pass.
 10. Feel the burn.
+
 
 ### How to structure the specs?
 
