@@ -11,14 +11,6 @@ Use common sense and deduction to figure out what code is being asked for, then 
 
 If you want a playground of data to experiment and practice with then run `bin/rake db:seed`, followed by `bin/rails c`, and then try out a few queries with the provided data. e.g. `Category.where("name like '%e%'").count` and `Product.all`.
 
-## Draft Workout Plans (work in progress)
-
-### What to practice?
-
-From `find` to advanced queries using `join`, `includes`. Everything covered in Rails ActiveRecord Querying guide and anything else useful not mentioned. Comb through API docs. 
-
-Don't be too abstract with models, favour classes developers might encounter in a day job.
-
 ### How do I run the exercises?
 
 1. `git clone git@github.com:eliotsykes/rails-activerecord-aerobics.git`
@@ -32,6 +24,13 @@ Don't be too abstract with models, favour classes developers might encounter in 
 9. Repeat steps 7 and 8 until all your exercises pass.
 10. Feel the burn.
 
+## Draft Workout Plans (work in progress)
+
+### What to practice?
+
+From `find` to advanced queries using `join`, `includes`. Everything covered in Rails ActiveRecord Querying guide and anything else useful not mentioned. Comb through API docs. 
+
+Don't be too abstract with models, favour classes developers might encounter in a day job.
 
 ### How to structure the specs?
 
