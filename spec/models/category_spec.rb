@@ -13,4 +13,10 @@ RSpec.describe Category, :type => :model do
       expect(Category.new).to have_and_belong_to_many(:products)
     end
   end
+
+  context "table" do
+    it "has unique index on name" do
+      expect(Category.new).to have_db_index(:name).unique(true)
+    end
+  end
 end
