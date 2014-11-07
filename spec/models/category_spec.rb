@@ -19,4 +19,10 @@ RSpec.describe Category, :type => :model do
       expect(Category.new).to have_db_index(:name).unique(true)
     end
   end
+
+  context "validations" do
+    it "validates name is unique" do
+      expect(Category.new).to validate_uniqueness_of(:name)
+    end
+  end
 end
