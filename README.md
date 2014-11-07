@@ -21,7 +21,7 @@ Don't be too abstract with models, favour classes developers might encounter in 
 
 ### How do I run the exercises?
 
-1. `git clone` (skip fork?)
+1. `git clone git@github.com:eliotsykes/rails-activerecord-aerobics.git`
 2. `cd rails-activerecord-aerobics`
 3. `bundle install`
 4. `bundle binstubs rspec-core`
