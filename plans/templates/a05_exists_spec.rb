@@ -67,4 +67,67 @@ describe ".exists? workout" do
 
   end
 
+  context "with Array and Hash conditions" do
+
+    it "tells you if a record exists matching single condition" do
+      
+      create(:article, id: 100, headline: "Aliens Make First Contact")
+      
+      expect(Article.exists?(headline: "Pigs Can Fly")).to eq(false)
+      expect(Article.exists?(["headline = ?", "Pigs Can Fly"])).to eq(false)
+      expect(Article.exists?(["headline LIKE ?", "%Can%"])).to eq(false)
+      
+      expect(Article.exists?(headline: "Aliens Make First Contact")).to eq(true)#hide
+      # expect(Article.exists?(headline: "Aliens Make First Contact")).to eq(YOUR_CODE_HERE)#show
+      expect(Article.exists?(["headline = ?", "Aliens Make First Contact"])).to eq(true)#hide
+      # expect(Article.exists?(["headline = ?", "Aliens Make First Contact"])).to eq(YOUR_CODE_HERE)#show
+      expect(Article.exists?(["headline LIKE ?", "%First%"])).to eq(true)#hide
+      # expect(Article.exists?(["headline LIKE ?", "%First%"])).to eq(YOUR_CODE_HERE)#show
+      
+      expect(Article.exists?(id: 99)).to eq(false)
+      expect(Article.exists?(["id = ?", 99])).to eq(false)
+      
+      expect(Article.exists?(id: 100)).to eq(true)
+      expect(Article.exists?(["id = ?", 100])).to eq(true)#hide
+      # expect(Article.exists?(["id = ?", YOUR_CODE_HERE])).to eq(true)#show
+
+      expect(Article.exists?(id: [99, 100, 101])).to eq(true)
+      expect(Article.exists?([ "id in (?)", [99, 100, 101] ])).to eq(true)#hide
+      # expect(Article.exists?([ "id in (?)", [99, YOUR_CODE_HERE, 101] ])).to eq(true)#show
+
+      book = create(:book, title: "Design Patterns")
+      
+      expect(Book.exists?(title: "Guinness Book of Records 2099")).to eq(false)#hide
+      # expect(Book.YOUR_CODE_HERE?(title: "Guinness Book of Records 2099")).to eq(false)#show
+      expect(Book.exists?(["title = ?", "Guinness Book of Records 2099"])).to eq(false)#hide
+      # expect(Book.exists?(["title = YOUR_CODE_HERE", "Guinness Book of Records 2099"])).to eq(false)#show
+      expect(Book.exists?(["title LIKE ?", "%99"])).to eq(false)#hide
+      # expect(Book.YOUR_CODE_HERE(["title LIKE ?", "%99"])).to eq(YOUR_CODE_HERE)#show
+      
+      expect(Book.exists?(title: "Design Patterns")).to eq(true)#hide
+      # expect(Book.exists?(YOUR_CODE_HERE: YOUR_CODE_HERE)).to eq(true)#show
+      expect(Book.exists?(["title = ?", "Design Patterns"])).to eq(true)#hide
+      # expect(Book.exists?([YOUR_CODE_HERE, "Design Patterns"])).to eq(true)#show
+      expect(Book.exists?(["title LIKE ?", "%terns"])).to eq(true)#hide
+      # expect(Book.exists?([YOUR_CODE_HERE, "%terns"])).to eq(true)#show
+      
+      expect(Book.exists?(id: book.id - 1)).to eq(false)#hide
+      # expect(Book.exists?(id: YOUR_CODE_HERE)).to eq(false)#show
+      expect(Book.exists?(["id = ?", book.id - 1])).to eq(false)#hide
+      # expect(Book.exists?(["id = ?", YOUR_CODE_HERE])).to eq(false)#show
+      
+      expect(Book.exists?(id: book.id)).to eq(true)#hide
+      # expect(YOUR_CODE_HERE(YOUR_CODE_HERE: book.id)).to eq(true)#show
+      expect(Book.exists?(["id = ?", book.id])).to eq(true)#hide
+      # expect(Book.exists?([YOUR_CODE_HERE, book.id])).to eq(true)#show
+
+      expect(Book.exists?(id: [book.id, 98765])).to eq(true)#hide
+      # expect(Book.exists?(id: [YOUR_CODE_HERE, 98765, YOUR_CODE_HERE])).to eq(true)#show
+      expect(Book.exists?([ "id in (?)", [54321, book.id] ])).to eq(true)#hide
+      # expect(YOUR_CODE_HERE([ "id in (YOUR_CODE_HERE)", [54321, book.id] ])).to eq(true)#show
+
+    end
+
+  end
+
 end
