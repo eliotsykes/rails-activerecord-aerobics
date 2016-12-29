@@ -1,4 +1,6 @@
-# Rails ActiveRecord Aerobics
+# [UNMAINTAINED] Rails ActiveRecord Aerobics
+**PLEASE NOTE** This project is abandoned and left here in case its of use to others. Please feel free to start and publish your own fork with your own customizations.
+
 Boost your [Rails ActiveRecord Query](http://guides.rubyonrails.org/active_record_querying.html) core fitness with this workout plan. For the home, office, and gym.
 
 Rails ActiveRecord Aerobics is a collection of exercises to help you learn, practice, and master Rails ActiveRecord Querying. 
